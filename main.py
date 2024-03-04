@@ -12,4 +12,4 @@ data = pandas.read_csv("weather_data.csv")
 # average_temp = data["temp"].mean()
 # max_temp = data["temp"].max()
 
-print(data[data.temp == data.temp.max()])
+monday = data[data.day == "Monday"]
