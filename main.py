@@ -13,3 +13,4 @@ data = pandas.read_csv("weather_data.csv")
 # max_temp = data["temp"].max()
 
 monday = data[data.day == "Monday"]
+print(monday.condition)
