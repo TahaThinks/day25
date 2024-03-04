@@ -1,7 +1,3 @@
-data = []
-
-with open("weather_data.csv") as file:
-    for line in file:
-        data.append(line.rstrip())
-
-print(data)
+with open("weather_data.csv") as data_file:
+    data = data_file.readline()
+    print(data)
