@@ -29,20 +29,15 @@ import pandas
 raw_data = pandas.read_csv("squirrel_raw_data.csv")
 squirrels_fur_color = raw_data["Primary Fur Color"]
 # print(squirrels_fur_color)
-cinnamon = 0
-black = 0
-gray = 0
 
-for squirrel_fur_color in squirrels_fur_color:
-    if squirrel_fur_color == "Gray":
-        gray += 1
-    elif squirrel_fur_color == "Cinnamon":
-        cinnamon += 1
-    elif squirrel_fur_color == "Black":
-        black += 1
+cinnamon = len(raw_data[squirrels_fur_color == "Cinnamon"])
+black = len(raw_data[squirrels_fur_color == "Black"])
+gray = len(raw_data[squirrels_fur_color == "Gray"])
+
+print(cinnamon,black, gray)
 
 color_dict = {
-    "Fur Color":["grey", "red", "black"],
+    "Fur Color": ["grey", "red", "black"],
     "Count": [gray, cinnamon, black]
 }
 
