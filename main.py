@@ -19,6 +19,6 @@ data = pandas.read_csv("weather_data.csv")
 
 # Create a datafame from scratch
 data_dict = {
-    "students":["Amy", "James", "Angela"],
-    "scores":[76, 56, 65]
+    "students": ["Amy", "James", "Angela"],
+    "scores": [76, 56, 65]
 }
