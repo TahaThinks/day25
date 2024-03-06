@@ -1,6 +1,6 @@
 import pandas
-
-data = pandas.read_csv("weather_data.csv")
+#
+# data = pandas.read_csv("weather_data.csv")
 # # print(data["temp"])
 #
 # data_dict = data.to_dict()
@@ -22,3 +22,7 @@ data_dict = {
     "students": ["Amy", "James", "Angela"],
     "scores": [76, 56, 65]
 }
+
+data = pandas.DataFrame(data_dict)
+
+print(data.students[0])
