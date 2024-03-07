@@ -17,7 +17,7 @@ game_is_on = True
 guessed_states = []
 
 while len(guessed_states) < 50:
-    answer_state = screen.textinput(title="Guess the State", prompt="Enter a State:").title()
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 Guess the State", prompt="Enter a State:").title()
     if answer_state in us_states_list:
         guessed_states.append(answer_state)
         print("Exists")
