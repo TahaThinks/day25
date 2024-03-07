@@ -14,10 +14,12 @@ screen.addshape(image)
 turtle.shape(image)
 
 game_is_on = True
+guessed_states = []
 
-while game_is_on:
+while len(guessed_states) < 50:
     answer_state = screen.textinput(title="Guess the State", prompt="Enter a State:").title()
     if answer_state in us_states_list:
+        guessed_states.append(answer_state)
         print("Exists")
         desired_row = us_states[us_states["state"] == answer_state]
         x_coordinate = desired_row.x.item()
